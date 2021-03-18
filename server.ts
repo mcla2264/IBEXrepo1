@@ -39,4 +39,6 @@ export class Server {
      callback(this.DEFAULT_PORT)
    );
  }
-}
+}private configureApp(): void {
+   this.app.use(express.static(path.join(__dirname, "../public")));
+ }
